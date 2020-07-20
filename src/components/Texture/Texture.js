@@ -6,7 +6,17 @@ import BG from '../../images/texture.png';
 // ====
 
 const Texture = () => {
-  return <TextureBG BgImg={BG} />;
+  let HEIGHT = null;
+  if (window) {
+    HEIGHT = window.innerHeight;
+    window.addEventListener('resize', () => {
+      HEIGHT = window.innerHeight;
+
+      // TODO - Try using UseEffect here instead to redraw the element on resize
+    });
+  }
+
+  return <TextureBG BgImg={BG} style={{ height: `100vh` }} />;
 };
 
 export default Texture;
@@ -19,7 +29,7 @@ const TextureBG = styled.div`
   left: 0;
   z-index: 100;
   width: 100vw;
-  height: 100vh;
+  height: ${({ height }) => (height ? `${height}px` : `100vh`)};
   opacity: 0.75;
   background-blend-mode: screen;
   background-image: url(${(props) => props.BgImg});

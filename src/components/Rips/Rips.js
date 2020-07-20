@@ -9,11 +9,9 @@ import RipImg from '../../images/rips.png';
 const Rips = ({ children }) => {
   return (
     <>
-      <Rip BgSrc={RipImg}>Rip</Rip>
+      <Rip BgSrc={RipImg} />
       {children && <Content>{children}</Content>}
-      <Rip BgSrc={RipImg} flip>
-        Rip
-      </Rip>
+      <Rip BgSrc={RipImg} flip />
     </>
   );
 };
