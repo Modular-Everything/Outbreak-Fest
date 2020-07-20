@@ -1,7 +1,9 @@
+/* ============================================================================
 /* * Import normalize
 */
 @import '../../node_modules/normalize.css/normalize.css';
 
+/* ============================================================================
 /* * Define some defaults
 */
 :root {
@@ -15,19 +17,58 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --gutter: 32px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+  --font-family-sans-serif: 'Eurostile', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-/* * Set up the body
+/* ============================================================================
+/* * Fonts
+*/
+
+@font-face {
+  font-family: EurostileExt;
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/EurostileExt-Reg/EurostileExt-Reg.eot');
+  src: url('../fonts/EurostileExt-Reg/EurostileExt-Reg.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/EurostileExt-Reg/EurostileExt-Reg.woff') format('woff'),
+    url('../fonts/EurostileExt-Reg/EurostileExt-Reg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: EurostileExt;
+  font-weight: 900;
+  font-style: normal;
+  src: url('../fonts/EurostileExt-Bla/EurostileExt-Bla.eot');
+  src: url('../fonts/EurostileExt-Bla/EurostileExt-Bla.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/EurostileExt-Bla/EurostileExt-Bla.woff') format('woff'),
+    url('../fonts/EurostileExt-Bla/EurostileExt-Bla.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Eurostile;
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Eurostile-Reg/Eurostile-Reg.eot');
+  src: url('../fonts/Eurostile-Reg/Eurostile-Reg.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/Eurostile-Reg/Eurostile-Reg.woff') format('woff'),
+    url('../fonts/Eurostile-Reg/Eurostile-Reg.ttf') format('truetype');
+}
+
+/* ============================================================================
+/* * Body
 */
 body {
   font-family: var(--font-family-sans-serif);
   background-color: var(--primary);
 }
 
-/* * Container element
+/* ============================================================================
+/* * Container
 */
 .container {
   width: 100%;
