@@ -8,7 +8,7 @@
 */
 :root {
   --primary: #1d4ea7;
-  --secondaty: #e09b17;
+  --secondary: #e09b17;
   --light: #fff;
   --dark: #1d2025;
   --breakpoint-xs: 0;
@@ -71,7 +71,7 @@ body {
 /* * Container
 */
 .container {
-  width: 100%;
+  width: calc(100% - (var(--gutter) * 2));
   padding-right: var(--gutter);
   padding-left: var(--gutter);
   margin-right: auto;
