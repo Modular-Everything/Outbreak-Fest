@@ -1,3 +1,6 @@
+const autoprefixer = require(`autoprefixer`);
+const nesting = require(`postcss-nesting`);
+
 module.exports = {
   siteMetadata: {
     title: `Outbreak Fest 2021`,
@@ -37,6 +40,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [autoprefixer, nesting],
+      },
+    },
     `gatsby-plugin-offline`,
   ],
 };

@@ -1,0 +1,54 @@
+/* * Import normalize
+*/
+@import '../../node_modules/normalize.css/normalize.css';
+
+/* * Define some defaults
+*/
+:root {
+  --primary: #1d4ea7;
+  --secondaty: #e09b17;
+  --light: #fff;
+  --dark: #1d2025;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --gutter: 32px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* * Set up the body
+*/
+body {
+  font-family: var(--font-family-sans-serif);
+  background-color: var(--primary);
+}
+
+/* * Container element
+*/
+.container {
+  width: 100%;
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {
+    max-width: var(--breakpoint-sm);
+  }
+
+  @media (min-width: 768px) {
+    max-width: var(--breakpoint-md);
+  }
+
+  @media (min-width: 992px) {
+    max-width: var(--breakpoint-lg);
+  }
+
+  @media (min-width: 1200px) {
+    max-width: var(--breakpoint-xl);
+  }
+}
