@@ -5,7 +5,10 @@ import { useStaticQuery, graphql } from 'gatsby';
 import '../../styles/styles.css';
 import Header from '../Header/Header';
 import Texture from '../Texture/Texture';
+import Hero from '../Hero/Hero';
 import Footer from '../Footer/Footer';
+
+// ====
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,6 +23,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Hero />
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>
         <div className="container">{children}</div>
@@ -30,8 +34,10 @@ const Layout = ({ children }) => {
   );
 };
 
+export default Layout;
+
+// ====
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default Layout;
