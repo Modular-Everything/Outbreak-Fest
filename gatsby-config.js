@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Outbreak Fest 2021`,
     description: `Hardcore music festival.`,
-    author: `@chrishd`,
+    author: `@chrish-d`,
   },
   plugins: [
     {
