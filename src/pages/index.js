@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import '../styles/styles.css';
 import OutbreakLogo from '../images/logo.png';
 import SEO from '../components/SEO/SEO';
+import Texture from '../components/Texture/Texture';
 
 // ====
 
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <SEO title="Announcement Soon" />
     <Logo src={OutbreakLogo} alt="Outbreak Fest 2021" />
     <h2>Announcement soon</h2>
+    <Texture />;
   </Wrapper>
 );
 
