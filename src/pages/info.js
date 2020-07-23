@@ -5,6 +5,7 @@ import SEO from '../components/SEO/SEO';
 import BigDate from '../components/BigDate/BigDate';
 import Divider from '../components/Divider/Divider';
 import SocialMedia from '../components/SocialMedia/SocialMedia';
+import FAQ from '../components/FAQ/FAQ';
 
 // ====
 
@@ -14,7 +15,7 @@ const IndexPage = () => (
     <Divider />
     <BigDate />
     <Divider />
-    Info
+    <FAQ />
     <SocialMedia />
   </Layout>
 );
