@@ -13,21 +13,29 @@ const Header = ({ siteTitle }) => (
       <Navigation role="navigation">
         <ul>
           <li>
-            <Link to="/">Line-up</Link>
+            <Link activeClassName="active" to="/lineup">
+              Line-up
+            </Link>
           </li>
           <li>
-            <Link to="/">History</Link>
+            <Link activeClassName="active" to="/history">
+              History
+            </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link activeClassName="active" to="/">
               <Logo src={OutbreakLogo} alt={siteTitle} />
             </Link>
           </li>
           <li>
-            <Link to="/">Tickets</Link>
+            <Link activeClassName="active" to="/tickets">
+              Tickets
+            </Link>
           </li>
           <li>
-            <Link to="/">Info</Link>
+            <Link activeClassName="active" to="/info">
+              Info
+            </Link>
           </li>
         </ul>
       </Navigation>
