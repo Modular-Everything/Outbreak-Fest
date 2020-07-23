@@ -4,14 +4,14 @@ import styled from 'styled-components';
 
 // ====
 
-const BigCopy = ({ error }) => {
-  if (error) {
+const BigCopy = ({ custom, title, subtitle, copy }) => {
+  if (custom) {
     return (
       <div className="container">
         <BigCopyWrap>
-          <Date>Oh shit</Date>
-          <Venue>Someone fucked up</Venue>
-          <Location>This page doesn&apos;t exist</Location>
+          {title && <Date>{title}</Date>}
+          {subtitle && <Venue>{subtitle}</Venue>}
+          {copy && <Location>{copy}</Location>}
         </BigCopyWrap>
       </div>
     );
@@ -66,9 +66,15 @@ const Location = styled.p`
 // ====
 
 BigCopy.propTypes = {
-  error: PropTypes.bool,
+  custom: PropTypes.bool,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  copy: PropTypes.string,
 };
 
 BigCopy.defaultProps = {
-  error: false,
+  custom: false,
+  title: null,
+  subtitle: null,
+  copy: null,
 };

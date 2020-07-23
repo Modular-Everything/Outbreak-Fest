@@ -12,7 +12,12 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Page Not Found" />
     <Divider />
-    <BigCopy error />
+    <BigCopy
+      custom
+      title="Oh shit"
+      subtitle="Someone fucked up"
+      copy="This page doesn't exist"
+    />
     <Divider />
     <SocialMedia />
   </Layout>
