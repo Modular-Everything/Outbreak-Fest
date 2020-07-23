@@ -15,7 +15,7 @@ const IndexPage = () => (
     <Divider />
     <BigDate />
     <Divider />
-    <Video videoId="4auoaq1XmWQ" />
+    <Video videoId="4auoaq1XmWQ" caption="Defeater, 2019" />
   </Layout>
 );
 

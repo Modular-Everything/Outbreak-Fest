@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 // ====
 
-const Video = ({ videoId }) => {
+const Video = ({ videoId, caption }) => {
   const opts = {
     playerVars: {
       modestbranding: 1,
@@ -17,6 +17,7 @@ const Video = ({ videoId }) => {
   return (
     <YouTubeWrap>
       <YouTube videoId={videoId} opts={opts} />
+      {caption && <Caption>{caption}</Caption>}
     </YouTubeWrap>
   );
 };
@@ -40,8 +41,20 @@ const YouTubeWrap = styled.div`
   }
 `;
 
+const Caption = styled.p`
+  font-size: 1.125;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--light);
+`;
+
 // ====
 
 Video.propTypes = {
   videoId: PropTypes.string.isRequired,
+  caption: PropTypes.string,
+};
+
+Video.defaultProps = {
+  caption: null,
 };
