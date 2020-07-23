@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
     <>
       <Hero />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>
+      <main className="spacing__homepage">
         <div className="container">{children}</div>
       </main>
       <Footer />

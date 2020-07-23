@@ -93,3 +93,14 @@ body {
     max-width: var(--breakpoint-xl);
   }
 }
+
+/* ============================================================================
+/* * Spacing
+*/
+
+.spacing__homepage {
+  & .container > * {
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+  }
+}
