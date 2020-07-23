@@ -71,7 +71,7 @@ const Navigation = styled.nav`
       color: var(--secondary);
 
       &:hover {
-        color: var(--light);
+        color: var(--dark);
       }
     }
   }
