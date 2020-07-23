@@ -44,7 +44,8 @@ const YouTubeWrap = styled.div`
 const Caption = styled.p`
   font-size: 1.125;
   text-align: center;
-  margin-top: 2rem;
+  padding-top: 2rem;
+  margin: 0;
   color: var(--light);
 `;
 

@@ -44,6 +44,7 @@ const Navigation = styled.nav`
     display: grid;
     grid-template-columns: 1fr 1fr 300px 1fr 1fr;
     grid-gap: 3rem;
+    margin: 0;
     list-style: none;
   }
 
