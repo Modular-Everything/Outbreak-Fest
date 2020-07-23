@@ -8,7 +8,7 @@ import OutbreakLogo from '../../images/logo.png';
 // ====
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <header style={{ marginBottom: `4.5rem` }}>
     <div className="container">
       <Navigation role="navigation">
         <ul>

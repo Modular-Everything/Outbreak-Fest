@@ -15,9 +15,11 @@ const Video = ({ videoId }) => {
   };
 
   return (
-    <YouTubeWrap>
-      <YouTube videoId={videoId} opts={opts} />
-    </YouTubeWrap>
+    <div className="container">
+      <YouTubeWrap>
+        <YouTube videoId={videoId} opts={opts} />
+      </YouTubeWrap>
+    </div>
   );
 };
 

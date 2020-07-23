@@ -4,7 +4,11 @@ import styled from 'styled-components';
 // ====
 
 const Divider = () => {
-  return <Dash />;
+  return (
+    <div className="container">
+      <Dash />
+    </div>
+  );
 };
 
 export default Divider;

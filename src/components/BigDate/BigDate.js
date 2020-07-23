@@ -5,13 +5,15 @@ import styled from 'styled-components';
 
 const BigDate = () => {
   return (
-    <BigDateWrap>
-      <Date>Friday 25-Sunday 27 June 2021</Date>
-      <address>
-        <Venue>Bowlers Exhibition Centre</Venue>
-        <Location>Manchester, UK</Location>
-      </address>
-    </BigDateWrap>
+    <div className="container">
+      <BigDateWrap>
+        <Date>Friday 25-Sunday 27 June 2021</Date>
+        <address>
+          <Venue>Bowlers Exhibition Centre</Venue>
+          <Location>Manchester, UK</Location>
+        </address>
+      </BigDateWrap>
+    </div>
   );
 };
 
