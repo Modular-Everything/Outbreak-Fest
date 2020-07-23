@@ -2,15 +2,20 @@ import React from 'react';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
+import BigCopy from '../components/BigCopy/BigCopy';
+import Divider from '../components/Divider/Divider';
+import SocialMedia from '../components/SocialMedia/SocialMedia';
 
 // ====
 
-const NotFoundPage = () => (
+const IndexPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <SEO title="Page Not Found" />
+    <Divider />
+    <BigCopy error />
+    <Divider />
+    <SocialMedia />
   </Layout>
 );
 
-export default NotFoundPage;
+export default IndexPage;

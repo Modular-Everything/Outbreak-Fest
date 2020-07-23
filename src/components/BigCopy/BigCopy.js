@@ -1,27 +1,40 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 // ====
 
-const BigDate = () => {
+const BigCopy = ({ error }) => {
+  if (error) {
+    return (
+      <div className="container">
+        <BigCopyWrap>
+          <Date>Oh shit</Date>
+          <Venue>Someone fucked up</Venue>
+          <Location>This page doesn&apos;t exist</Location>
+        </BigCopyWrap>
+      </div>
+    );
+  }
+
   return (
     <div className="container">
-      <BigDateWrap>
+      <BigCopyWrap>
         <Date>Friday 25-Sunday 27 June 2021</Date>
         <address>
           <Venue>Bowlers Exhibition Centre</Venue>
           <Location>Manchester, UK</Location>
         </address>
-      </BigDateWrap>
+      </BigCopyWrap>
     </div>
   );
 };
 
-export default BigDate;
+export default BigCopy;
 
 // ====
 
-const BigDateWrap = styled.section`
+const BigCopyWrap = styled.section`
   text-align: center;
 
   & p {
@@ -49,3 +62,13 @@ const Location = styled.p`
   font-weight: bold;
   color: var(--light);
 `;
+
+// ====
+
+BigCopy.propTypes = {
+  error: PropTypes.bool,
+};
+
+BigCopy.defaultProps = {
+  error: false,
+};

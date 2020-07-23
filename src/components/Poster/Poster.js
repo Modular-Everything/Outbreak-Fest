@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 // ====
 
-const BigDate = () => {
+const BigCopy = () => {
   const DATA = useStaticQuery(graphql`
     query OutbreakPoster {
       file(name: { eq: "poster_2020" }) {
@@ -30,7 +30,7 @@ const BigDate = () => {
   );
 };
 
-export default BigDate;
+export default BigCopy;
 
 // ====
 
