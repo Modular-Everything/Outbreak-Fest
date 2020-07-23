@@ -8,7 +8,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 const BigDate = () => {
   const DATA = useStaticQuery(graphql`
     query OutbreakPoster {
-      file(name: { eq: "poster_latest" }) {
+      file(name: { eq: "poster_2020" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
