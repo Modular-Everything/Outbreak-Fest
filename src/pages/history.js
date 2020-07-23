@@ -10,7 +10,7 @@ import SocialMedia from '../components/SocialMedia/SocialMedia';
 // ====
 
 const IndexPage = () => (
-  <Layout>
+  <Layout mask>
     <SEO title="History" />
     <Divider />
     <BigCopy />

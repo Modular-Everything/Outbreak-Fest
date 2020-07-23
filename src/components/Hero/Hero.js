@@ -7,7 +7,7 @@ import Rips from '../Rips/Rips';
 
 // ====
 
-const Hero = () => {
+const Hero = ({ mask }) => {
   const DATA = useStaticQuery(graphql`
     query HeroImagesQ {
       allFile(limit: 3, filter: { name: { glob: "brand-image_*" } }) {
@@ -25,7 +25,7 @@ const Hero = () => {
   `);
 
   return (
-    <HeroWrap>
+    <HeroWrap mask={mask}>
       <HeroImages>
         {DATA.allFile.edges.map((node) => {
           return (
@@ -48,7 +48,9 @@ export default Hero;
 // ====
 
 const HeroWrap = styled.section`
+  position: relative;
   overflow: hidden;
+  margin-top: ${({ mask }) => mask && `-40vh`};
 `;
 
 const HeroImages = styled.ul`

@@ -10,7 +10,7 @@ import FAQ from '../components/FAQ/FAQ';
 // ====
 
 const IndexPage = () => (
-  <Layout>
+  <Layout mask>
     <SEO title="Home" />
     <Divider />
     <BigCopy />

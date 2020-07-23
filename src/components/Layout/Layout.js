@@ -10,7 +10,7 @@ import Footer from '../Footer/Footer';
 
 // ====
 
-const Layout = ({ children }) => {
+const Layout = ({ children, mask }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Hero />
+      <Hero mask={mask} />
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="spacing__homepage">{children}</main>
       <Footer />
@@ -38,4 +38,9 @@ export default Layout;
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  mask: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  mask: false,
 };
