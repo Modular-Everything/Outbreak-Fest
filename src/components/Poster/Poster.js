@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
+import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 
 // ====
 
 const BigCopy = () => {
   const DATA = useStaticQuery(graphql`
     query OutbreakPoster {
-      file(name: { eq: "poster_2020" }) {
+      file(name: { eq: "2020" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -18,13 +19,41 @@ const BigCopy = () => {
     }
   `);
 
+  const options = {
+    settings: {},
+    caption: {
+      showCaption: false,
+      disableKeyboardControls: true,
+      disableWheelControls: true,
+    },
+    buttons: {
+      showAutoplayButton: false,
+      showCloseButton: false,
+      showDownloadButton: false,
+      showFullscreenButton: false,
+      showNextButton: false,
+      showPrevButton: false,
+      showThumbnailsButton: false,
+    },
+    thumbnails: {
+      showThumbnails: false,
+    },
+    progressBar: {
+      showProgressBar: false,
+    },
+  };
+
   return (
     <div className="container">
       <PosterWrap>
-        <Img
-          fluid={DATA.file.childImageSharp.fluid}
-          alt="Outbreak Fest 2021 Lineup Poster"
-        />
+        <SimpleReactLightbox>
+          <SRLWrapper options={options}>
+            <Img
+              fluid={DATA.file.childImageSharp.fluid}
+              alt="Outbreak Fest 2021 Lineup Poster"
+            />
+          </SRLWrapper>
+        </SimpleReactLightbox>
       </PosterWrap>
     </div>
   );
@@ -42,5 +71,6 @@ const PosterWrap = styled.div`
 
   & img {
     width: 100%;
+    cursor: pointer;
   }
 `;
