@@ -22,7 +22,7 @@ export default Rips;
 
 const Rip = styled.div`
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   background-image: url(${({ BgSrc }) => BgSrc});
   background-position: bottom;
   background-repeat: repeat-x;
@@ -31,6 +31,7 @@ const Rip = styled.div`
 `;
 
 const Content = styled.section`
+  padding: 2.25rem 0;
   background-color: #fff;
 `;
 
