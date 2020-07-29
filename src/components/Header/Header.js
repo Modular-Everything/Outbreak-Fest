@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <header style={{ marginBottom: `4.5rem` }}>
+    <HeaderWrap>
       <div className="container">
         <Navigation role="navigation" open={menu}>
           <MobileNav>
@@ -63,11 +63,22 @@ const Header = ({ siteTitle }) => {
           </ul>
         </Navigation>
       </div>
-    </header>
+    </HeaderWrap>
   );
 };
 
 export default Header;
+
+// ====
+
+const HeaderWrap = styled.header`
+  margin-top: -4rem;
+  margin-bottom: 4.5rem;
+
+  @media (min-width: 1024px) {
+    margin-top: 0;
+  }
+`;
 
 // ====
 
@@ -155,6 +166,12 @@ const Navigation = styled.nav`
   & li:nth-of-type(4) {
     justify-content: flex-start;
   }
+
+  & li:last-of-type {
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
 `;
 
 const Logo = styled.div`
@@ -181,7 +198,7 @@ const MobileNav = styled.div`
 
   & img {
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     mix-blend-mode: screen;
   }
 `;
