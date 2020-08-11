@@ -4,21 +4,18 @@ import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
 import BigCopy from '../components/BigCopy/BigCopy';
 import Divider from '../components/Divider/Divider';
+import Posters from '../components/Posters/Posters';
 import SocialMedia from '../components/SocialMedia/SocialMedia';
 
 // ====
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Page Not Found" />
+  <Layout mask>
+    <SEO title="History" />
     <Divider />
-    <BigCopy
-      custom
-      title="Oh shit"
-      subtitle="Someone fucked up"
-      copy="This page doesn't exist"
-    />
+    <BigCopy />
     <Divider />
+    <Posters />
     <SocialMedia />
   </Layout>
 );

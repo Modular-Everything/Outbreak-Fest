@@ -1,9 +1,37 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 // ====
 
-const Footer = () => {
-  return <footer>© {new Date().getFullYear()}</footer>;
-};
+const Footer = () => (
+  <FooterWrap>
+    <div className="container">
+      <P>© {new Date().getFullYear()}</P>
+      <P>
+        <Link to="/privacy-policy">Privacy Policy</Link>
+      </P>
+    </div>
+  </FooterWrap>
+);
 
 export default Footer;
+
+// ====
+
+const FooterWrap = styled.footer`
+  margin: 4.5rem 0;
+`;
+
+const P = styled.p`
+  font-size: 1.125;
+  text-align: center;
+  margin: 0;
+  color: var(--light);
+
+  & a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--light);
+  }
+`;

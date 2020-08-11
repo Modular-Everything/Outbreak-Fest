@@ -5,20 +5,17 @@ import SEO from '../components/SEO/SEO';
 import BigCopy from '../components/BigCopy/BigCopy';
 import Divider from '../components/Divider/Divider';
 import SocialMedia from '../components/SocialMedia/SocialMedia';
+import FAQ from '../components/FAQ/FAQ';
 
 // ====
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Page Not Found" />
+  <Layout mask>
+    <SEO title="Home" />
     <Divider />
-    <BigCopy
-      custom
-      title="Oh shit"
-      subtitle="Someone fucked up"
-      copy="This page doesn't exist"
-    />
+    <BigCopy />
     <Divider />
+    <FAQ />
     <SocialMedia />
   </Layout>
 );

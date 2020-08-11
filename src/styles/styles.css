@@ -16,7 +16,6 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --gutter: 32px;
   --font-family-sans-serif: 'Eurostile', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -71,9 +70,9 @@ body {
 /* * Container
 */
 .container {
-  width: calc(100% - (var(--gutter) * 2));
-  padding-right: var(--gutter);
-  padding-left: var(--gutter);
+  width: calc(100% - 2rem);
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
 
@@ -86,10 +85,29 @@ body {
   }
 
   @media (min-width: 992px) {
+    width: calc(100% - 4rem);
     max-width: var(--breakpoint-lg);
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 
   @media (min-width: 1200px) {
     max-width: var(--breakpoint-xl);
+  }
+}
+
+/* ============================================================================
+/* * Spacing
+*/
+
+.spacing__homepage {
+  & > * {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    @media (min-width: 992px) {
+      margin-top: 4.5rem;
+      margin-bottom: 4.5rem;
+    }
   }
 }

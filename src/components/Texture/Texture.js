@@ -7,8 +7,7 @@ import BG from '../../images/texture.png';
 
 const Texture = () => {
   // let HEIGHT = null;
-  // if (window !== undefined) {
-  //   // TODO - Fix undefined error when building
+  // if (window) {
   //   HEIGHT = window.innerHeight;
   //   window.addEventListener('resize', () => {
   //     HEIGHT = window.innerHeight;
@@ -25,7 +24,7 @@ export default Texture;
 // ====
 
 const TextureBG = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;

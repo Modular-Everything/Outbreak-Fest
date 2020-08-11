@@ -70,3 +70,8 @@ yarn-error.log
 
 # Local Netlify folder
 .netlify
+
+# Ignore certain images
+src/images/gallery/
+src/images/hero_image/
+src/images/posters/

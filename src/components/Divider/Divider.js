@@ -4,7 +4,11 @@ import styled from 'styled-components';
 // ====
 
 const Divider = () => {
-  return <Dash />;
+  return (
+    <div className="container">
+      <Dash />
+    </div>
+  );
 };
 
 export default Divider;
@@ -12,9 +16,10 @@ export default Divider;
 // ====
 
 const Dash = styled.hr`
-  width: 100%;
+  width: 50%;
   max-width: 38rem;
   height: 1px;
+  margin: 0 auto;
   border: 0;
   background-color: var(--light);
 `;
