@@ -29,20 +29,12 @@ const Header = ({ siteTitle }) => {
 
           <ul>
             <li>
-              <Link
-                partiallyActive={true}
-                activeClassName="active"
-                to="/lineup"
-              >
+              <Link partiallyActive activeClassName="active" to="/lineup">
                 Line-up
               </Link>
             </li>
             <li>
-              <Link
-                partiallyActive={true}
-                activeClassName="active"
-                to="/history"
-              >
+              <Link partiallyActive activeClassName="active" to="/history">
                 History
               </Link>
             </li>
@@ -54,16 +46,12 @@ const Header = ({ siteTitle }) => {
               </Link>
             </li>
             <li>
-              <Link
-                partiallyActive={true}
-                activeClassName="active"
-                to="/tickets"
-              >
+              <a href="https://outbreak.seetickets.com/tour/outbreak-fest-2020">
                 Tickets
-              </Link>
+              </a>
             </li>
             <li>
-              <Link partiallyActive={true} activeClassName="active" to="/info">
+              <Link partiallyActive activeClassName="active" to="/info">
                 Info
               </Link>
             </li>
