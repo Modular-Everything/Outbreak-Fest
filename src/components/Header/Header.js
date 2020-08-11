@@ -72,15 +72,10 @@ export default Header;
 // ====
 
 const HeaderWrap = styled.header`
-  margin-top: -4rem;
   margin-bottom: 2rem;
 
   @media (min-width: 992px) {
     margin-bottom: 4.5rem;
-  }
-
-  @media (min-width: 1024px) {
-    margin-top: 0;
   }
 `;
 
