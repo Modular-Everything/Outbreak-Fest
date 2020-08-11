@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 // ====
@@ -8,9 +7,6 @@ const Footer = () => (
   <FooterWrap>
     <div className="container">
       <P>© {new Date().getFullYear()}</P>
-      <P>
-        <Link to="/privacy-policy">Privacy Policy</Link>
-      </P>
     </div>
   </FooterWrap>
 );
