@@ -15,8 +15,8 @@ const SocialMedia = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
       fetch(`/.netlify/functions/instagram`)
-        .then((res) => res.json())
-        .then((data) => {
+        .then(res => res.json())
+        .then(data => {
           setPosts(data);
         });
     }, []);
@@ -26,7 +26,7 @@ const SocialMedia = () => {
   const insta = useInstagram();
 
   return (
-    <div>
+    <div style={{ zIndex: '10', position: 'relative' }}>
       <Rips>
         <div className="container">
           <Title>Latest from social media</Title>
@@ -34,7 +34,7 @@ const SocialMedia = () => {
             {!insta.length ? (
               <Loading>Loading...</Loading>
             ) : (
-              insta.map((gram) => (
+              insta.map(gram => (
                 <li key={gram.id}>
                   <a href={gram.url} target="_blank" rel="noreferrer noopener">
                     <img
