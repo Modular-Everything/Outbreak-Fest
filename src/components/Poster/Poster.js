@@ -48,7 +48,6 @@ const BigCopy = () => {
       <PosterWrap>
         <SimpleReactLightbox>
           <SRLWrapper options={options}>
-            <div className="overlay">View Gallery</div>
             <Img
               fluid={DATA.file.childImageSharp.fluid}
               alt="Outbreak Fest 2021 Lineup Poster"
@@ -69,16 +68,6 @@ const PosterWrap = styled.div`
   max-width: 720px;
   margin: 0 auto;
   box-shadow: 0px 0px 24px rgba(29, 32, 37, 0.15);
-
-  .overlay {
-    opacity: 0;
-  }
-
-  &:hover {
-    .overlay {
-      opacity: 1;
-    }
-  }
 
   & img {
     width: 100%;
