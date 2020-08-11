@@ -69,6 +69,9 @@ const GalleryWrap = styled.ul`
   }
 
   & li {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: calc(1066 / 1600 * 100%);
     transition: opacity 0.25s ease;
 
     &:hover {
