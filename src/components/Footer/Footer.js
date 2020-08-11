@@ -16,7 +16,11 @@ export default Footer;
 // ====
 
 const FooterWrap = styled.footer`
-  margin: 4.5rem 0;
+  margin: 2rem 0;
+
+  @media (min-width: 640px) {
+    margin: 4.5rem 0;
+  }
 `;
 
 const P = styled.p`
