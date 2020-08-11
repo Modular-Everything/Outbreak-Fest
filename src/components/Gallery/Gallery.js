@@ -53,12 +53,20 @@ export default Gallery;
 
 const GalleryWrap = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
   width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   & li {
     transition: opacity 0.25s ease;
