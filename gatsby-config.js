@@ -9,16 +9,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-source-storyblok',
-      options: {
-        accessToken: 'AuU2GoTntmHoz7Ovj9wh9gtt',
-        resolveLinks: true,
-        // resolveRelations: [],
-        homeSlug: 'home',
-        version: process.env.NODE_ENV === `production` ? `published` : `draft`,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -53,6 +43,5 @@ module.exports = {
         postCssPlugins: [autoprefixer, nesting],
       },
     },
-    `gatsby-plugin-offline`,
   ],
 };

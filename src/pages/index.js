@@ -16,7 +16,7 @@ const IndexPage = () => (
     <Divider />
     <BigCopy />
     <Divider />
-    <Video videoId="4auoaq1XmWQ" />
+    <Video />
     <SocialMedia />
   </Layout>
 );

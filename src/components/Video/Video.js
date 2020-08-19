@@ -1,57 +1,39 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import YouTube from 'react-youtube';
-import styled from 'styled-components';
 
 // ====
 
-const Video = ({ videoId }) => {
-  const opts = {
-    playerVars: {
-      modestbranding: 1,
-      controls: 0,
-      rel: 0,
-    },
-  };
-
+const Video = () => {
   return (
     <div className="container">
-      <YouTubeWrap>
-        <YouTube videoId={videoId} opts={opts} />
-      </YouTubeWrap>
+      <div
+        style={{
+          width: '100%',
+          height: '0',
+          paddingBottom: 'calc(900 / 1600 * 100%)',
+          position: 'relative',
+        }}
+      >
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/4auoaq1XmWQ"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          title="Outbreak Fest 2020"
+          allowFullScreen
+          style={{
+            position: 'absolute',
+            top: '0',
+            bottom: '0',
+            left: '0',
+            right: '0',
+            height: '100%',
+            width: '100%',
+          }}
+        />
+      </div>
     </div>
   );
 };
 
 export default Video;
-
-// ====
-
-const YouTubeWrap = styled.div`
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-top: 56.25%;
-
-  & iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-`;
-
-// const Caption = styled.p`
-//   font-size: 1.125;
-//   text-align: center;
-//   padding-top: 2rem;
-//   margin: 0;
-//   color: var(--light);
-// `;
-
-// ====
-
-Video.propTypes = {
-  videoId: PropTypes.string.isRequired,
-};

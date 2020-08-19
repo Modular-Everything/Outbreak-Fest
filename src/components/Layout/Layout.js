@@ -11,7 +11,7 @@ import Footer from '../Footer/Footer';
 
 // ====
 
-const Layout = ({ children, mask }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
