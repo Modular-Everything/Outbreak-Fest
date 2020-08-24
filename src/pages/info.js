@@ -93,6 +93,12 @@ const IndexPage = () => (
           area.
         </li>
         <li>
+          This is a no barrier event, by purchasing a ticket you understand the
+          precautions you should take to ensure your own safety. The promoter
+          accepts no liability for any injuries caused through the actions of
+          either yourself or other attendees.
+        </li>
+        <li>
           Customers are requested to address any special access requirements in
           advance of their visit by contacting
           <a href="mailto:ticketing@outbreak-fest.co.uk">
