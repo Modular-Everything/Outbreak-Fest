@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Layout from '../../components/Layout/Layout';
 import { useStaticQuery, graphql } from 'gatsby';
+import Layout from '../../components/Layout/Layout';
 import SEO from '../../components/SEO/SEO';
 import BigCopy from '../../components/BigCopy/BigCopy';
 import Divider from '../../components/Divider/Divider';
@@ -38,8 +38,8 @@ const IndexPage = () => {
       <BigCopy
         custom
         title="September 2012"
-        subtitle="Broomhall Centre"
-        copy="Sheffield, UK"
+        subtitle="The Well"
+        copy="Leeds, UK"
       />
       <Divider />
       <Gallery set={DATA} />
