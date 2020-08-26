@@ -40,13 +40,10 @@ const FAQ = () => {
         </Collapsible>
         <Collapsible trigger="Where can I stay?">
           <p>
-            We have a number of hotels available in ticket packages for your
-            ease. All of these hotels are a short drive away from the festival.
-          </p>
-          <p>
-            If these hotels are not suitable for your requirements there are
-            plenty of other hotels available. We do not offer camping overnight,
-            campervans etc.
+            There are a number of popular hotel chains a short drive / walk from
+            the venue such as Holiday Inn, Travelodge, Premier Inn etc. If these
+            hotels do not suit your requirements we advise you look closer
+            towards the city centre to find something more suitable
           </p>
         </Collapsible>
         <Collapsible trigger="What bands are playing which days?">
@@ -85,9 +82,8 @@ const FAQ = () => {
         </Collapsible>
         <Collapsible trigger="Are there any age restrictions?">
           <p>
-            There is no minimum age however the event is not suitable for young
-            children; attendees under the age of 16 will not be admitted onto
-            the event site without an accompanying adult.
+            Yes 14+, anyone under the age of 16 must be accompanied by an adult
+            at all times
           </p>
         </Collapsible>
         <Collapsible trigger="Can I bring my own drinks / alcohol?">
