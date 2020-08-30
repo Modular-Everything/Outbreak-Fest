@@ -11,10 +11,9 @@ import SocialMedia from '../components/SocialMedia/SocialMedia';
 const IndexPage = () => (
   <Layout mask>
     <SEO title="Home" />
+    <BigCopy custom title="Tickets on sale Wednesday 9am" />
     <Divider />
     <BigCopy />
-    <Divider />
-    Tickets
     <SocialMedia />
   </Layout>
 );
