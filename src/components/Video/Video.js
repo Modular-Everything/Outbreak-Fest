@@ -16,11 +16,11 @@ const Video = () => {
         <iframe
           width="100%"
           height="315"
-          src="https://www.youtube-nocookie.com/embed/4auoaq1XmWQ"
+          src="https://www.youtube.com/embed/rIpajHpIifc"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          title="Outbreak Fest 2020"
           allowFullScreen
+          title="Outbreak Video"
           style={{
             position: 'absolute',
             top: '0',
