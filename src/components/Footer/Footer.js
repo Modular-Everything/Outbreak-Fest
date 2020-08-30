@@ -6,7 +6,17 @@ import styled from 'styled-components';
 const Footer = () => (
   <FooterWrap>
     <div className="container">
-      <P>© {new Date().getFullYear()}</P>
+      <P>© Outbreak Fest {new Date().getFullYear()}</P>
+      <P>
+        Website by{' '}
+        <a
+          href="https://modulareverything.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Modular Everything
+        </a>
+      </P>
     </div>
   </FooterWrap>
 );
