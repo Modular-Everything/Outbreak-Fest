@@ -8,14 +8,22 @@ import SocialMedia from '../components/SocialMedia/SocialMedia';
 
 // ====
 
-const IndexPage = () => (
-  <Layout mask>
-    <SEO title="Home" />
-    <BigCopy custom title="Tickets on sale Wednesday 9am" />
-    <Divider />
-    <BigCopy />
-    <SocialMedia />
-  </Layout>
-);
+const IndexPage = () => {
+  if (typeof window !== `undefined`) {
+    window.location.href = 'https://outbreak.seetickets.com/';
+  }
+
+  return (
+    <Layout mask>
+      <SEO title="Home" />
+      <a href="https://outbreak.seetickets.com/">
+        <BigCopy custom title="Redirecting..." />
+      </a>
+      <Divider />
+      <BigCopy />
+      <SocialMedia />
+    </Layout>
+  );
+};
 
 export default IndexPage;

@@ -46,10 +46,10 @@ const Header = ({ siteTitle }) => {
               </Link>
             </li>
             <li>
-              {/* <a href="https://outbreak.seetickets.com/">Tickets</a> */}
-              <Link partiallyActive activeClassName="active" to="/tickets">
+              <a href="https://outbreak.seetickets.com/">Tickets</a>
+              {/* <Link partiallyActive activeClassName="active" to="/tickets">
                 Tickets
-              </Link>
+              </Link> */}
             </li>
             <li>
               <Link partiallyActive activeClassName="active" to="/info">
