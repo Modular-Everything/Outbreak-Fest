@@ -1,5 +1,3 @@
-// Thanks Wes Bos! https://github.com/wesbos/wesbos/blob/master/functions/instagram.js
-
 require('isomorphic-fetch');
 
 const url = `https://www.instagram.com/graphql/query/?query_hash=FMfcgxwJXpPkhfVbPHrJJdJQwbmCpTlX.8&variables={"id":"510242604","first":8}`;
