@@ -2,7 +2,7 @@
 
 require('isomorphic-fetch');
 
-const url = `https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"510242604","first":8}`;
+const url = `https://www.instagram.com/graphql/query/?query_hash=FMfcgxwJXpPkhfVbPHrJJdJQwbmCpTlX.8&variables={"id":"510242604","first":8}`;
 
 function slimUpPosts(response) {
   return response.data.user.edge_owner_to_timeline_media.edges.map((edge) => ({
