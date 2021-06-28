@@ -37,7 +37,7 @@ const BigCopy = ({ custom, title, subtitle, copy }) => {
       <BigCopyWrap>
         <Countdown date={EVENT_DATE} renderer={renderer} />
 
-        <DateWrap>Saturday 25-Sunday 26 June 2022</DateWrap>
+        <DateWrap>Friday 24-Sunday 26 June 2022</DateWrap>
         <address>
           <Venue>Bowlers Exhibition Centre</Venue>
           <Location>Manchester, UK</Location>
@@ -60,10 +60,6 @@ const BigCopyWrap = styled.section`
     font-style: normal;
     text-transform: uppercase;
     margin: 0;
-
-    &:first-of-type {
-      margin-bottom: 0.5rem;
-    }
 
     @media (min-width: 768px) {
       font-size: 2rem;
