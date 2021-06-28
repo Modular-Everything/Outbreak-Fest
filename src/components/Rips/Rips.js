@@ -26,7 +26,7 @@ const Rip = styled.div`
   background-image: url(${({ BgSrc }) => BgSrc});
   background-position: bottom;
   background-repeat: repeat-x;
-  background-size: 40%;
+  background-size: contain;
   transform: ${({ flip }) => (flip ? `rotate(180deg)` : `none`)};
 
   @media (min-width: 640px) {
