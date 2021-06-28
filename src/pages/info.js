@@ -27,7 +27,14 @@ const IndexPage = () => {
       <LargeCopy>
         <h2>Contact Us</h2>
         <p>
+          General:{' '}
           <a href="mailto:info@outbreak-fest.co.uk">info@outbreak-fest.co.uk</a>
+        </p>
+        <p>
+          Ticketing:{' '}
+          <a href="mailto:ticketing@outbreak-fest.co.uk">
+            ticketing@outbreak-fest.co.uk
+          </a>
         </p>
       </LargeCopy>
       <Divider />
@@ -84,7 +91,9 @@ const IndexPage = () => {
             variety of food and beverages will be available for purchase inside
             the venue.
           </li>
-          <li>There is no re-admission once you have left the venue.</li>
+          <li>
+            There is no re-admission once you have left the venue grounds.
+          </li>
           <li>
             Ticket holders consent to any filming and sound recordings as
             members of the audience.
@@ -107,7 +116,7 @@ const IndexPage = () => {
           </li>
           <li>
             Customers are requested to address any special access requirements
-            in advance of their visit by contacting
+            in advance of their visit by contacting{' '}
             <a href="mailto:ticketing@outbreak-fest.co.uk">
               ticketing@outbreak-fest.co.uk
             </a>

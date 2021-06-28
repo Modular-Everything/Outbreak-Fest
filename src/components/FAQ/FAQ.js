@@ -27,7 +27,6 @@ const FAQ = () => {
             <strong>Bowlers Exhibition Centre</strong>, Longbridge Rd, Trafford
             Park, Stretford, Manchester M17 1SN
           </address>
-          o
           <p>
             <a
               href="https://www.google.com/maps/place/Bowlers+Exhibition+Centre/@53.4669051,-2.3409825,13z/data=!4m5!3m4!1s0x487baf4f1cf96ccd:0xa0c15f256019890e!8m2!3d53.4689026!4d-2.3296059"
@@ -43,7 +42,7 @@ const FAQ = () => {
             There are a number of popular hotel chains a short drive / walk from
             the venue such as Holiday Inn, Travelodge, Premier Inn etc. If these
             hotels do not suit your requirements we advise you look closer
-            towards the city centre to find something more suitable
+            towards the city centre to find something more suitable.
           </p>
         </Collapsible>
         <Collapsible trigger="What bands are playing which days?">
@@ -83,7 +82,7 @@ const FAQ = () => {
         <Collapsible trigger="Are there any age restrictions?">
           <p>
             Yes 14+, anyone under the age of 16 must be accompanied by an adult
-            at all times
+            at all times.
           </p>
         </Collapsible>
         <Collapsible trigger="Can I bring my own drinks / alcohol?">
