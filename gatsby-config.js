@@ -3,8 +3,8 @@ const nesting = require(`postcss-nesting`);
 
 module.exports = {
   siteMetadata: {
-    title: `Outbreak Fest 2021`,
-    description: `Hardcore music festival.`,
+    title: `Outbreak Fest 2022`,
+    description: `A hardcore music festival.`,
     author: `@chrish-d`,
   },
   plugins: [

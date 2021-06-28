@@ -18,7 +18,7 @@ const BigCopy = ({ custom, title, subtitle, copy }) => {
     );
   }
 
-  const EVENT_DATE = new Date('June 25, 2021');
+  const EVENT_DATE = new Date('June 24, 2022');
 
   const renderer = ({ days, hours, completed }) => {
     if (completed || hours > 20) {
@@ -37,7 +37,7 @@ const BigCopy = ({ custom, title, subtitle, copy }) => {
       <BigCopyWrap>
         <Countdown date={EVENT_DATE} renderer={renderer} />
 
-        <DateWrap>Friday 25-Sunday 27 June 2021</DateWrap>
+        <DateWrap>Saturday 25-Sunday 26 June 2022</DateWrap>
         <address>
           <Venue>Bowlers Exhibition Centre</Venue>
           <Location>Manchester, UK</Location>

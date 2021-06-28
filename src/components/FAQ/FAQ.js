@@ -12,7 +12,7 @@ const FAQ = () => {
       <QAWrap>
         <Collapsible trigger="I'm in a band and want to submit us to play, who do I contact?">
           <p>
-            The 2021 Line-up is full and we are not currently accepting
+            The 2022 Line-up is full and we are not currently accepting
             submissions.
           </p>
         </Collapsible>
