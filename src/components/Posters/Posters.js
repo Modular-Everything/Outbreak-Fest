@@ -32,10 +32,7 @@ const Posters = () => {
         {DATA.allFile.edges.map(edge => {
           return (
             <li>
-              <Link to={`/history/${edge.node.name}`}>
-                <div className="overlay">Click for photos</div>
-                <Img fluid={edge.node.childImageSharp.fluid} alt="" />
-              </Link>
+              <Img fluid={edge.node.childImageSharp.fluid} alt="" />
             </li>
           );
         })}
@@ -96,7 +93,6 @@ const PostersWrap = styled.ul`
 
     img {
       width: 100%;
-      cursor: pointer;
     }
   }
 `;
