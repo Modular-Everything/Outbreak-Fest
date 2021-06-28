@@ -74,3 +74,5 @@ yarn-error.log
 # Ignore certain images
 src/images/gallery/
 src/images/hero_image/
+
+todo
