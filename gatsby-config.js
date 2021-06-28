@@ -3,21 +3,11 @@ const nesting = require(`postcss-nesting`);
 
 module.exports = {
   siteMetadata: {
-    title: `Outbreak Fest 2021`,
+    title: `Outbreak Fest 2022`,
     description: `Hardcore music festival.`,
     author: `@chrish-d`,
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-storyblok',
-      options: {
-        accessToken: 'AuU2GoTntmHoz7Ovj9wh9gtt',
-        resolveLinks: true,
-        // resolveRelations: [],
-        homeSlug: 'home',
-        version: process.env.NODE_ENV === `production` ? `published` : `draft`,
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
