@@ -85,10 +85,9 @@ const Header = ({ siteTitle }) => {
               </Link>
             </li>
             <li>
-              <a href="https://outbreak.seetickets.com/">Tickets</a>
-              {/* <Link partiallyActive activeClassName="active" to="/tickets">
+              <a href="https://outbreak.seetickets.com/event/outbreak-fest-2022/bowlers-exhibition-centre/1985343">
                 Tickets
-              </Link> */}
+              </a>
             </li>
             <li>
               <Link partiallyActive activeClassName="active" to="/info">
