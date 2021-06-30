@@ -37,7 +37,7 @@ const BigCopy = ({ custom, title, subtitle, copy }) => {
       <BigCopyWrap>
         <Countdown date={EVENT_DATE} renderer={renderer} />
 
-        <DateWrap>Friday 24-Sunday 26 June 2022</DateWrap>
+        <DateWrap>Friday 24 - Sunday 26 June 2022</DateWrap>
         <address>
           <Venue>Bowlers Exhibition Centre</Venue>
           <Location>Manchester, UK</Location>
