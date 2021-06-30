@@ -10,7 +10,7 @@ const Footer = () => (
       <P>
         Website by{' '}
         <a
-          href="https://modulareverything.com/"
+          href="http://modulareverything.com/"
           target="_blank"
           rel="noreferrer noopener"
         >
