@@ -9,7 +9,7 @@ import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 const BigCopy = () => {
   const DATA = useStaticQuery(graphql`
     query OutbreakPoster {
-      file(name: { eq: "2021" }) {
+      file(name: { eq: "2022" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
