@@ -85,7 +85,7 @@ const Header = ({ siteTitle }) => {
               </Link>
             </li>
             <li>
-              <a href="https://outbreak.seetickets.com/event/outbreak-fest-2022/bowlers-exhibition-centre/1985343">
+              <a href="https://outbreak.seetickets.com/tour/outbreak-fest-2022">
                 Tickets
               </a>
             </li>
