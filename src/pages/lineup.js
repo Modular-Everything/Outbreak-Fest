@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
@@ -9,16 +10,35 @@ import SocialMedia from '../components/SocialMedia/SocialMedia';
 
 // ====
 
-const IndexPage = () => (
-  <Layout mask>
-    <SEO title="Home" />
+const IndexPage = () => {
+  const DATA = useStaticQuery(graphql`
+    query Posters2022 {
+      allFile(filter: { name: { regex: "/2022/" } }) {
+        nodes {
+          id
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  `);
 
-    <Divider />
-    <Poster />
-    <Divider />
-    <BigCopy />
-    <SocialMedia />
-  </Layout>
-);
+  return (
+    <Layout mask>
+      <SEO title="Home" />
+
+      <Divider />
+      {DATA.allFile.nodes.map(poster => (
+        <Poster key={poster.id} poster={poster.childImageSharp.fluid} />
+      ))}
+      <Divider />
+      <BigCopy />
+      <SocialMedia />
+    </Layout>
+  );
+};
 
 export default IndexPage;

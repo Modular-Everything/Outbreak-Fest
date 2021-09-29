@@ -1,24 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { useStaticQuery, graphql } from 'gatsby';
 import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 
 // ====
 
-const BigCopy = () => {
-  const DATA = useStaticQuery(graphql`
-    query OutbreakPoster {
-      file(name: { eq: "2022" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-    }
-  `);
-
+const Poster = ({ poster }) => {
   const options = {
     settings: {},
     caption: {
@@ -48,10 +36,7 @@ const BigCopy = () => {
       <PosterWrap>
         <SimpleReactLightbox>
           <SRLWrapper options={options}>
-            <Img
-              fluid={DATA.file.childImageSharp.fluid}
-              alt="Outbreak Fest 2021 Lineup Poster"
-            />
+            <Img fluid={poster} alt="Poster" />
           </SRLWrapper>
         </SimpleReactLightbox>
       </PosterWrap>
@@ -59,7 +44,11 @@ const BigCopy = () => {
   );
 };
 
-export default BigCopy;
+Poster.propTypes = {
+  poster: PropTypes.string.isRequired,
+};
+
+export default Poster;
 
 // ====
 
