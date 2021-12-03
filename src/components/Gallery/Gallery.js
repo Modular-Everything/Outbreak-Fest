@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
+// import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 
 // ====
 
@@ -33,15 +33,11 @@ const Gallery = ({ set }) => {
   return (
     <div className="container">
       <GalleryWrap>
-        <SimpleReactLightbox>
-          {set.allFile.edges.map(edge => (
-            <SRLWrapper options={options}>
-              <li>
-                <Img fluid={edge.node.childImageSharp.fluid} alt="" />
-              </li>
-            </SRLWrapper>
-          ))}
-        </SimpleReactLightbox>
+        {set.allFile.edges.map(edge => (
+          <li>
+            <Img fluid={edge.node.childImageSharp.fluid} alt="" />
+          </li>
+        ))}
       </GalleryWrap>
     </div>
   );
