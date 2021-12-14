@@ -1,6 +1,6 @@
 require('isomorphic-fetch');
 
-const url = `https://www.instagram.com/graphql/query/?query_hash=d4d88dc1500312af6f937f7b804c68c3&variables={"id":"510242604","first":8}`;
+const url = `https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"510242604","first":8}`;
 
 const cache = {
   lastFetch: 0,
@@ -31,6 +31,7 @@ async function getPosts() {
   // const posts = data;
   cache.lastFetch = Date.now();
   cache.posts = posts;
+  console.log('posts');
   return posts;
 }
 
