@@ -31,7 +31,6 @@ async function getPosts() {
   // const posts = data;
   cache.lastFetch = Date.now();
   cache.posts = posts;
-  console.log('posts');
   return posts;
 }
 

@@ -25,8 +25,6 @@ const SocialMedia = () => {
 
   const insta = useInstagram();
 
-  console.log('instagram', insta);
-
   return (
     <div style={{ zIndex: '10', position: 'relative' }}>
       <Rips>
