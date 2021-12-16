@@ -36,13 +36,19 @@ const SocialMedia = () => {
             ) : (
               insta.map(gram => (
                 <li key={gram.id}>
-                  <a href={gram.url} target="_blank" rel="noreferrer noopener">
-                    <img
-                      src={`https://images.weserv.nl/?url=${encodeURIComponent(
-                        gram.thumbnail,
-                      )}&w=255`}
-                      alt={gram.caption}
-                    />
+                  <a
+                    href={gram.permalink}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {gram.mediaType === 'VIDEO' ? (
+                      // eslint-disable-next-line jsx-a11y/media-has-caption
+                      <video width={500} height={500} controls>
+                        <source src={gram.mediaUrl} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <img src={gram.mediaUrl} alt={gram.caption} />
+                    )}
                   </a>
                 </li>
               ))
@@ -91,8 +97,7 @@ const Title = styled.h3`
 
 const Posts = styled.ul`
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   padding: 0;
   margin: 0;
@@ -103,7 +108,13 @@ const Posts = styled.ul`
     margin: 0;
   }
 
-  & img {
+  & a {
+    display: flex;
+  }
+
+  & img,
+  & video {
+    height: 100%;
     width: 100%;
   }
 `;

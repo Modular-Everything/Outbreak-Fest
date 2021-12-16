@@ -1,46 +1,34 @@
-require('isomorphic-fetch');
+const axios = require('axios');
+require('dotenv').config();
 
-const url = `https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"510242604","first":8}`;
+exports.handler = function instagram(event, context, callback) {
+  const endpoint = 'https://graph.instagram.com';
+  const userId = '17841401038127972';
+  const fields = 'id,caption,media_url,media_type,permalink';
+  const token = process.env.INSTAGRAM_ACCESS_TOKEN;
+  const limit = 6;
+  const url = `${endpoint}/${userId}/media/?fields=${fields}&access_token=${token}&limit=${limit}`;
 
-const cache = {
-  lastFetch: 0,
-  posts: [],
-};
-
-function slimUpPosts(response) {
-  return response.data.user.edge_owner_to_timeline_media.edges.map(edge => ({
-    biggie: edge.node.thumbnail_src,
-    thumbnail: edge.node.thumbnail_resources[2].src,
-    url: `https://instagram.com/p/${edge.node.shortcode}`,
-    caption:
-      edge.node.edge_media_to_caption.edges.length > 0
-        ? edge.node.edge_media_to_caption.edges[0].node.text
-        : null,
-    id: edge.node.id,
-  }));
-}
-
-async function getPosts() {
-  // first see if we have a cache in 30 mins
-  const timeSinceLastFetch = Date.now() - cache.lastFetch;
-  if (timeSinceLastFetch <= 1800000) {
-    return cache.posts;
-  }
-  const data = await fetch(url).then(res => res.json());
-  const posts = slimUpPosts(data);
-  // const posts = data;
-  cache.lastFetch = Date.now();
-  cache.posts = posts;
-  return posts;
-}
-
-exports.handler = async function posts(event, context, callback) {
-  const InstaPosts = await getPosts();
-  callback(null, {
-    statusCode: 200,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(InstaPosts),
-  });
+  axios
+    .get(url)
+    .then(({ data: { data: posts } }) => {
+      callback(null, {
+        statusCode: 200,
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(
+          posts.map(i => ({
+            id: i.id,
+            mediaUrl: i.media_url,
+            mediaType: i.media_type,
+            permalink: i.permalink,
+            caption: i.caption,
+          })),
+        ),
+      });
+    })
+    .catch(e => {
+      callback(e);
+    });
 };
