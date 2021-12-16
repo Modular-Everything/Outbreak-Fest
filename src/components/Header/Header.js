@@ -68,6 +68,13 @@ const Header = ({ siteTitle }) => {
 
           <ul>
             <li>
+              <Link to="/">
+                <Logo>
+                  <img src={OutbreakLogo} alt={siteTitle} />
+                </Logo>
+              </Link>
+            </li>
+            <li>
               <Link partiallyActive activeClassName="active" to="/lineup">
                 Line-up
               </Link>
@@ -78,17 +85,10 @@ const Header = ({ siteTitle }) => {
               </Link>
             </li>
             <li>
-              <Link to="/">
-                <Logo>
-                  <img src={OutbreakLogo} alt={siteTitle} />
-                </Logo>
-              </Link>
-            </li>
-            {/* <li>
               <a href="https://outbreak.seetickets.com/tour/outbreak-fest-2022">
                 Tickets
               </a>
-            </li> */}
+            </li>
             <li>
               <Link
                 partiallyActive
@@ -145,22 +145,15 @@ const Navigation = styled.nav`
     margin: 0;
     background-color: var(--primary);
     list-style: none;
+    text-align: center;
 
     @media (min-width: 1024px) {
       position: relative;
       display: grid;
-      grid-template-columns: 1fr 1fr 300px 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
       grid-gap: 3rem;
       width: unset;
       height: unset;
-    }
-
-    & li:nth-of-type(3) {
-      display: none;
-
-      @media (min-width: 1024px) {
-        display: unset;
-      }
     }
   }
 
@@ -202,16 +195,6 @@ const Navigation = styled.nav`
     @media (min-width: 1024px) {
       margin-bottom: 0;
     }
-  }
-
-  & li:nth-of-type(1),
-  & li:nth-of-type(2) {
-    justify-content: flex-end;
-  }
-
-  & li:nth-of-type(3),
-  & li:nth-of-type(4) {
-    justify-content: flex-start;
   }
 
   & li:last-of-type {
