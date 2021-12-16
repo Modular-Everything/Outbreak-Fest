@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => {
           `}
         </script>
         <script>
-          {`          
+          {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -39,7 +39,7 @@ const Header = ({ siteTitle }) => {
             `}
         </script>
         <noscript>
-          {`          
+          {`
             <img
               height="1"
               width="1"
@@ -84,10 +84,19 @@ const Header = ({ siteTitle }) => {
                 </Logo>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <a href="https://outbreak.seetickets.com/tour/outbreak-fest-2022">
                 Tickets
               </a>
+            </li> */}
+            <li>
+              <Link
+                partiallyActive
+                activeClassName="active"
+                to="/officialresale"
+              >
+                Official Resale
+              </Link>
             </li>
             <li>
               <Link partiallyActive activeClassName="active" to="/info">
