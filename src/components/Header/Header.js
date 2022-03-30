@@ -99,6 +99,11 @@ const Header = ({ siteTitle }) => {
               </Link>
             </li>
             <li>
+              <Link partiallyActive activeClassName="active" to="/press">
+                Press
+              </Link>
+            </li>
+            <li>
               <Link partiallyActive activeClassName="active" to="/info">
                 Info
               </Link>
@@ -157,10 +162,14 @@ const Navigation = styled.nav`
     }
   }
 
+  & li {
+    justify-content: center;
+  }
+
   & li a,
   & li button {
     font-family: 'EurostileExt', var(--font-family-sans-serif);
-    font-size: 10vw;
+    font-size: 7vw;
     font-weight: 900;
     text-transform: uppercase;
     border: 0;
@@ -207,7 +216,13 @@ const Navigation = styled.nav`
 const Logo = styled.div`
   & img {
     width: 100%;
+    max-width: 18rem;
     mix-blend-mode: screen;
+    margin-bottom: 1.6rem;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+    }
   }
 `;
 
