@@ -15,7 +15,7 @@ const IndexPage = () => {
 
   return (
     <Layout mask>
-      <SEO title="Home" />
+      <SEO title="Official Resale" />
       <a href="http://outbreakfest.twickets.live/">
         <BigCopy custom title="Redirecting..." />
       </a>
