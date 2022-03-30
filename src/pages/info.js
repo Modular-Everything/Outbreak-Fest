@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
@@ -35,6 +36,9 @@ const IndexPage = () => {
           <a href="mailto:ticketing@outbreak-fest.co.uk">
             ticketing@outbreak-fest.co.uk
           </a>
+        </p>
+        <p>
+          Press: <Link to="/press">outbreak-fest.co.uk/press</Link>
         </p>
       </LargeCopy>
       <Divider />
