@@ -8,7 +8,7 @@ import SocialMedia from '../components/SocialMedia/SocialMedia';
 
 // ====
 
-const IndexPage = () => {
+const ResalePage = () => {
   if (typeof window !== `undefined`) {
     window.location.href = 'http://outbreakfest.twickets.live/';
   }
@@ -26,4 +26,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default ResalePage;

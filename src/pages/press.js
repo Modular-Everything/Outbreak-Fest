@@ -8,15 +8,15 @@ import SocialMedia from '../components/SocialMedia/SocialMedia';
 
 // ====
 
-const IndexPage = () => {
+const PressPage = () => {
   if (typeof window !== `undefined`) {
-    window.location.href = 'http://outbreakfest.twickets.live/';
+    window.location.href = 'https://forms.gle/QtkRQrmpt6BgUgot8';
   }
 
   return (
     <Layout mask>
       <SEO title="Press" />
-      <a href="http://outbreakfest.twickets.live/">
+      <a href="https://forms.gle/QtkRQrmpt6BgUgot8">
         <BigCopy custom title="Redirecting..." />
       </a>
       <Divider />
@@ -26,4 +26,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default PressPage;
