@@ -2,6 +2,7 @@ import React from 'react';
 import Collapsible from 'react-collapsible';
 import styled from 'styled-components';
 
+import TramMap from '../../images/tram-map.png';
 import Map from '../../images/map.png';
 
 // ====
@@ -10,23 +11,46 @@ const FAQ = () => {
   return (
     <div className="container">
       <QAWrap>
-        <Collapsible trigger="I'm in a band and want to submit us to play, who do I contact?">
+        <Collapsible trigger="Where can I park my vehicle?">
           <p>
-            The 2022 Line-up is full and we are not currently accepting
-            submissions.
+            There is no parking on-site. There is, however, limited on street
+            parking options in the surrounding area. The festival is located on
+            a working industrial estate so expect the roads to be very busy on
+            Friday especially. We strongly advise everyone to make use of public
+            transport throughout the weekend and car share where possible.
           </p>
         </Collapsible>
-        <Collapsible trigger="When are the next wave of bands being announced?">
+
+        <Collapsible trigger="How do I get to the venue on public transport?">
           <p>
-            All information regarding announcements will be posted on our social
-            media.
+            Parkway station is conveniently located just over the road from the
+            venue. If you are arriving into Manchester via the city centre,
+            airport, or staying in Salford Quays, Didsbury or any other area
+            outside of the centre, purchase a Zone 2 ticket and simply catch any
+            tram heading to Cornbrook and change here. Take the next available
+            tram towards Trafford Park and get off at Parkway. Follow the
+            festival signs from here. Refer to the map below to plan your
+            journey in advance. The trams run regularly throughout the weekend
+            until around 11:30pm.
+          </p>
+          <p>
+            <a
+              href="https://tfgm.com/public-transport/tram/network-map"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={TramMap} alt="Manchester Tram Map" />
+            </a>
           </p>
         </Collapsible>
-        <Collapsible trigger="How do I get to the venue?">
-          <address>
-            <strong>Bowlers Exhibition Centre</strong>, Longbridge Rd, Trafford
-            Park, Stretford, Manchester M17 1SN
-          </address>
+
+        <Collapsible trigger="How do I get to the venue by car?">
+          <p>
+            Again we suggest using public transport from your accommodation, but
+            if that is not possible then please put the following address into
+            your sat nav / smartphone - Bowlers Exhibition Centre, Longbridge
+            Road, Trafford Park, Stretford, Manchester, M17 1SN.
+          </p>
           <p>
             <a
               href="https://www.google.com/maps/place/Bowlers+Exhibition+Centre/@53.4669051,-2.3409825,13z/data=!4m5!3m4!1s0x487baf4f1cf96ccd:0xa0c15f256019890e!8m2!3d53.4689026!4d-2.3296059"
@@ -37,153 +61,124 @@ const FAQ = () => {
             </a>
           </p>
         </Collapsible>
+
+        <Collapsible trigger="Can I bring a bag into the venue?">
+          <p>
+            Yes you can. The bag needs to be no bigger than a backpack and will
+            be subject to a check by security, at the gates.
+          </p>
+        </Collapsible>
+
         <Collapsible trigger="Where can I stay?">
           <p>
-            There are a number of popular hotel chains a short drive / walk from
-            the venue such as Holiday Inn, Travelodge, Premier Inn etc. If these
-            hotels do not suit your requirements we advise you look closer
-            towards the city centre to find something more suitable.
+            There are a number of popular hotel chains in Trafford Park however
+            many of these now appear to be booked up. If you still have not
+            found accommodation we advise you to look closer to the city centre,
+            salford quays or on Airbnb.
           </p>
         </Collapsible>
-        <Collapsible trigger="What bands are playing which days?">
-          <p>Day splits will be announced closer to the event.</p>
-        </Collapsible>
-        <Collapsible trigger="What time are doors?">
+
+        <Collapsible trigger="Will there be a cloakroom?">
           <p>
-            Doors are scheduled for 11am each day, these are subject to change
-            so please keep an eye on our social media and your email for any
-            changes.
+            Yes there is a cloakroom inside the venue, in the foyer between the
+            main and second stage. Please bare in mind that we have limited
+            capacity for belongings and operate on a first come, first serve
+            basis. So be prepared to keep your bag on you for the day. Maybe a
+            smaller shoulder / waste bag would be more appropriate?
           </p>
         </Collapsible>
-        <Collapsible trigger="What time do the bands start?">
-          <p>Straight after doors open. </p>
-        </Collapsible>
-        <Collapsible trigger="What ID do I need to bring with me?">
+
+        <Collapsible trigger="Can I bring a water bottle?">
           <p>
-            We will be employing a “Challenge 25” scheme so Under 18’s (or those
-            who look under 25) must bring an official ID (passport, photo
-            drivers licence etc).
-          </p>
-          <p>
-            Attendees without relevant ID will be issued with an Under 18
-            wristband (and thus will be refused alcohol at the bar).
+            You sure can and we absolutely encourage you to do so, and to stay
+            hydrated throughout the weekend. Please make sure your bottle is
+            plastic. It needs to be completely empty when you pass through the
+            festival gates. We have waterpoints in the outside area. Please do
+            not que at the bar for tap water.
           </p>
         </Collapsible>
-        <Collapsible trigger="Can I bring my camera?">
+
+        <Collapsible trigger="What do I need to bring with me?">
           <p>
-            If your camera has a detachable lense it will not be permitted into
-            the event without appropriate accreditation arranged in advance.
-          </p>
-          <p>
-            Other cameras such as disposable / point &amp; shoot are permitted
-            at your own risk.
-          </p>
-        </Collapsible>
-        <Collapsible trigger="Are there any age restrictions?">
-          <p>
-            Yes 14+, anyone under the age of 16 must be accompanied by an adult
-            at all times.
+            You must bring your ID. The venue operates a challenge 21 policy at
+            the bar. Please also bring, depending on the weather forecast - sun
+            cream, a sun hat, a coat or jacket. A plastic water bottle is
+            essential whatever the weather. A mobile phone to keep in touch with
+            friends and family.
           </p>
         </Collapsible>
-        <Collapsible trigger="Can I bring my own drinks / alcohol?">
-          <p>No, we have a fully licensed bar at the event.</p>
-        </Collapsible>
-        <Collapsible trigger="Is there food?">
+
+        <Collapsible trigger="What can I NOT bring with me?">
           <p>
-            Yes, we have plenty of great vegan food traders at the event who
-            will be running all through the event.
+            Please do not bring alcohol, drugs, sharp objects or any other
+            illegal substances into the festival site. If you are found in
+            possession of these you will not be able to enter the event.
+            Security checks will be in operation. Smoking is NOT permitted
+            inside the venue - this includes the use of vapes or e-cigarettes.
+            You may smoke outside. Please do not bring electrical equipment such
+            as laptops, ipads,drones or professional cameras with a detachable
+            lens. Small disposable, point and shoot or film cameras are fine
+            though.
           </p>
         </Collapsible>
-        <Collapsible trigger="Is there disabled access?">
+
+        <Collapsible trigger="What time does the festival open?">
           <p>
-            Yes - 2 for 1 PA scheme, Disabled toilets and viewing area
-            available. Please contact us at{' '}
-            <a href="mailto:info@outbreak-fest.co.uk?subject=Disabled access">
-              info@outbreak-fest.co.uk
-            </a>{' '}
-            with the subject &ldquo;Disabled access&rdquo; in advance of the
-            event.
-          </p>
-          <p>
-            If you do not contact us in advance of the event we can not
-            guarentee you access to the festival due to safety restrictions.
+            Gates and wristband exchange open at 11am Friday, Saturday and
+            Sunday. A full artist schedule will be posted two weeks before the
+            event so you can plan your day. The Thursday pre show opens at 6pm,
+            however, wristband exchange will be open to everyone from 5pm until
+            10pm if you are in the area and would like to get your wristband
+            early.
           </p>
         </Collapsible>
-        <Collapsible trigger="What should I do with my valuables?">
+
+        <Collapsible trigger="What are the festival age restrictions?">
           <p>
-            Try to leave as many valuables at home as possible. For any
-            valuables that you absolutely have to bring with you we recommend
-            using the cloakroom on site, items will be stored for a small fee.
+            14+, anyone under the age 16 must be accompanied by an adult, 18 or
+            over at all times.
           </p>
         </Collapsible>
-        <Collapsible trigger="What is the parking like?">
+
+        <Collapsible trigger="Is there food available?">
           <p>
-            We have space for hundreds of cars on site free of charge, parking
-            officials will be on hand to assist. These are at a first come first
-            serve basis and we do not guarantee you will get a space.
+            Yes we have plenty of street food vendors on-site, serving a huge
+            variety of different foods. They are all fully vegan and have gluten
+            free options available. Please speak to the vendors directly on the
+            day if you have any specific dietary requirements or allergies.
           </p>
         </Collapsible>
-        <Collapsible trigger="Can I leave my car at the venue overnight?">
+
+        <Collapsible trigger="Does the festival have disabled access?">
           <p>
-            No, the car park must be cleared straight after the event finishes
-            each night. Anyone who does leave their car on-site overnight will
-            be fined, potentially towed and will be refused access to the
-            festival.
+            Yes, we have accessibility ramps, viewing platforms in all live
+            rooms and disbled toilets. Please contact us at
+            info@outbreak-fest.co.uk to discuss your requirements in advance. If
+            you do not get in touch prior to the event we won&lsquo;t be able to
+            guarantee access to the viewing platform.
           </p>
         </Collapsible>
-        <Collapsible trigger="I'm a trader and would like to trade at Outbreak Fest, how do I get in touch?">
+
+        <Collapsible trigger="When will my ticket arrive?">
           <p>
-            We are currently accepting vegan friendly traders, please send an
-            email to{' '}
-            <a href="mailto:info@outbreak-festival.co.uk?subject=Trading at Outbreak">
-              info@outbreak-festival.co.uk
-            </a>{' '}
-            to discuss.
+            Your ticket will arrive 14 days before the event. If it has not
+            arrived 7 days before the event then please email
+            ticketing@outbreak-fest.co.uk
           </p>
         </Collapsible>
-        <Collapsible trigger="I've ordered my ticket, When will it arrive?">
-          <p>
-            Your ticket will arrive approximately 14 days before the event. If
-            it hasn&apos;t arrived 7 days before the event please contact{' '}
-            <a href="mailto:ticketing@outbreak-fest.co.uk?subject=My ticket hasn't arrived">
-              ticketing@outbreak-fest.co.uk
-            </a>
-          </p>
-        </Collapsible>
-        <Collapsible trigger="I've bought a ticket but I can no longer go, can I please have a refund?">
+
+        <Collapsible trigger="I've bought a ticket but can no longer go?">
           <p>
             Unfortunately unless the event is cancelled we are unable to offer
-            refunds.
+            refunds. Please sell your ticket on our official resale site here:
+            outbreak-fest.co.uk/officialresale
           </p>
         </Collapsible>
-        <Collapsible trigger="I've bought a weekend ticket but I can only go 1 or 2 of the days, can my friend use my ticket the other day?">
+
+        <Collapsible trigger="Can I buy a day-ticket?">
           <p>
-            No, you will be given a weekend ticket wristband that is not
-            interchangeable. Your friend would need to purchase their own
-            ticket.
-          </p>
-        </Collapsible>
-        <Collapsible trigger="Can I buy a day ticket?">
-          <p>
-            Day tickets will be available much closer to the event when day
-            splits are announced, these will be very limited so we recommend
-            purchasing a weekend ticket if you do not want to miss out.
-          </p>
-        </Collapsible>
-        <Collapsible trigger="Contact Us">
-          <p>
-            General:
-            <br />
-            <a href="mailto:info@outbreak-fest.co.uk">
-              info@outbreak-fest.co.uk
-            </a>
-          </p>
-          <p>
-            Ticketing:
-            <br />
-            <a href="mailto:ticketing@outbreak-fest.co.uk">
-              ticketing@outbreak-fest.co.uk
-            </a>
+            Very limited day tickets were released onto our website, please
+            check availability here outbreak-fest.co.uk/tickets
           </p>
         </Collapsible>
       </QAWrap>
