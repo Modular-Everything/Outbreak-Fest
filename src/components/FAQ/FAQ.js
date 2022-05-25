@@ -84,7 +84,7 @@ const FAQ = () => {
             main and second stage. Please bare in mind that we have limited
             capacity for belongings and operate on a first come, first serve
             basis. So be prepared to keep your bag on you for the day. Maybe a
-            smaller shoulder / waste bag would be more appropriate?
+            smaller shoulder / waist bag would be more appropriate?
           </p>
         </Collapsible>
 
