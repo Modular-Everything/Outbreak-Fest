@@ -8,9 +8,9 @@ const Footer = () => (
     <div className="container">
       <P>© Outbreak Fest {new Date().getFullYear()}</P>
       <P>
-        Website by{' '}
+        Shout outs{' '}
         <a
-          href="http://chrish.design/"
+          href="http://modular-everything.com/"
           target="_blank"
           rel="noreferrer noopener"
         >
