@@ -23,15 +23,13 @@ const FAQ = () => {
 
         <Collapsible trigger="How do I get to the venue on public transport?">
           <p>
-            Parkway station is conveniently located just over the road from the
-            venue. If you are arriving into Manchester via the city centre,
-            airport, or staying in Salford Quays, Didsbury or any other area
-            outside of the centre, purchase a Zone 2 ticket and simply catch any
-            tram heading to Cornbrook and change here. Take the next available
-            tram towards Trafford Park and get off at Parkway. Follow the
-            festival signs from here. Refer to the map below to plan your
-            journey in advance. The trams run regularly throughout the weekend
-            until around 11:30pm.
+            If you are arriving via the city centre, airport, or staying in
+            Salford Quays, Didsbury or any other area outside of the centre,
+            purchase a ticket or tap on / off with a contactless card, then
+            simply catch any tram heading to Cornbrook and change here. Take the
+            next available tram towards Trafford Park and get off at Parkway.
+            Follow the festival signs from here. The trams run regularly
+            throughout the weekend until around 11:30pm.
           </p>
           <p>
             <a
@@ -41,6 +39,26 @@ const FAQ = () => {
             >
               <img src={TramMap} alt="Manchester Tram Map" />
             </a>
+          </p>
+        </Collapsible>
+
+        <Collapsible trigger="Can I re-enter the festival on the same day?">
+          <p>Yes, the final entry is 8pm.</p>
+        </Collapsible>
+
+        <Collapsible trigger="Is there a barrier?">
+          <p>
+            As usual, there is no barrier directly in front of the stages.
+            However, to avoid crowd surging we have decided to install barrier
+            half way into the audience. This is to manage the flow of people in
+            and out of this area, and to keep everybody safe. Everyone will have
+            the opportunity to access the front section, subject to capacity at
+            any given time. The area in front of the main stage alone can hold
+            twice the capacity that any previous Outbreak Fest has ever had. It
+            was important for us to create a separate space for those who want
+            to simply watch and enjoy the performance, rather than participate,
+            but still retain the intimate experience that you all expect from
+            us.
           </p>
         </Collapsible>
 
