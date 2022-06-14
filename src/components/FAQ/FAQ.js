@@ -62,6 +62,31 @@ const FAQ = () => {
           </p>
         </Collapsible>
 
+        <Collapsible trigger="Will the rail strike affect my travel?">
+          <p>
+            As it stands, the trams in Manchester are currently unaffected.
+            Please check the National Rail website for more information on the
+            national train network to see if your journey is effected:{' '}
+            <a href="https://nationalrail.co.uk">nationalrail.co.uk</a>
+          </p>
+        </Collapsible>
+
+        <Collapsible trigger="Can I use the skate ramp?">
+          <p>
+            Yes (skateboards only), but you must store it in the storage
+            provided in the skate room. Skateboards are left at your own risk.
+          </p>
+        </Collapsible>
+
+        <Collapsible trigger="Can I pay with cash?">
+          <p>
+            The bars accept cash or cards. Merch and food vendors may only
+            accept certain forms of payment so please prepare accordingly. There
+            will be no cash points on site or cash-back at the bar. Please bring
+            cash with you.
+          </p>
+        </Collapsible>
+
         <Collapsible trigger="How do I get to the venue by car?">
           <p>
             Again we suggest using public transport from your accommodation, but
@@ -158,12 +183,13 @@ const FAQ = () => {
           </p>
         </Collapsible>
 
-        <Collapsible trigger="Is there food available?">
+        <Collapsible trigger="Can I bring food and drink?">
           <p>
-            Yes we have plenty of street food vendors on-site, serving a huge
-            variety of different foods. They are all fully vegan and have gluten
-            free options available. Please speak to the vendors directly on the
-            day if you have any specific dietary requirements or allergies.
+            No, but we have plenty of street food vendors on-site, serving a
+            huge variety of different foods. They are all fully vegan and have
+            gluten free options available. Please speak to the vendors directly
+            on the day if you have any specific dietary requirements or
+            allergies.
           </p>
         </Collapsible>
 
