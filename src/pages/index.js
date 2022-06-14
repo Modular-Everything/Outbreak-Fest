@@ -14,7 +14,7 @@ const IndexPage = () => {
   const DATA = useStaticQuery(graphql`
     query Posters2022Home {
       allFile(
-        filter: { name: { regex: "/2022/" } }
+        filter: { name: { regex: "/latest-/" } }
         sort: { fields: name, order: ASC }
       ) {
         nodes {
