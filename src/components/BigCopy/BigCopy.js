@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Countdown from 'react-countdown';
+import { Link } from 'gatsby';
 
 // ====
 
@@ -18,11 +19,18 @@ const BigCopy = ({ custom, title, subtitle, copy }) => {
     );
   }
 
-  const EVENT_DATE = new Date('June 24, 2022');
+  const EVENT_DATE = new Date('June 21, 2022');
 
   const renderer = ({ days, hours, completed }) => {
     if (completed || hours > 20) {
-      return null;
+      return (
+        <Venue style={{ marginBottom: '4rem' }}>
+          <span style={{ color: 'var(--secondary)' }}>See you at the fest</span>
+          <br />
+          <br />
+          Check the <Link to="/info">FAQ</Link> for more info
+        </Venue>
+      );
     }
     return (
       <Venue style={{ marginBottom: '2rem' }}>
@@ -70,6 +78,11 @@ const BigCopyWrap = styled.section`
       font-size: 2.5rem;
       line-height: 1.1;
     }
+  }
+
+  & a {
+    color: var(--secondary);
+    text-decoration: underline;
   }
 `;
 
