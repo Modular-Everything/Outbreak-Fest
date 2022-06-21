@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
@@ -8,19 +8,27 @@ import SocialMedia from '../components/SocialMedia/SocialMedia';
 
 // ====
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Page Not Found" />
-    <Divider />
-    <BigCopy
-      custom
-      title="Oh shit"
-      subtitle="Someone fucked up"
-      copy="This page doesn't exist"
-    />
-    <Divider />
-    <SocialMedia />
-  </Layout>
-);
+const IndexPage = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.location = '/';
+      }, [3000]);
+    }
+  }, []);
+
+  return (
+    <Layout>
+      <SEO title="Page Not Found" />
+      <Divider />
+      <BigCopy
+        custom
+        copy="This page doesn't exist. Redirecting you in 3 seconds..."
+      />
+      <Divider />
+      <SocialMedia />
+    </Layout>
+  );
+};
 
 export default IndexPage;

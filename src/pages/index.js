@@ -1,45 +1,34 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useState } from 'react';
+import { Script } from 'gatsby';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
-import BigCopy from '../components/BigCopy/BigCopy';
-import Divider from '../components/Divider/Divider';
-import Poster from '../components/Poster/Poster';
-import SocialMedia from '../components/SocialMedia/SocialMedia';
 
 // ====
 
 const IndexPage = () => {
-  const DATA = useStaticQuery(graphql`
-    query Posters2022Home {
-      allFile(
-        filter: { name: { regex: "/latest-/" } }
-        sort: { fields: name, order: ASC }
-      ) {
-        nodes {
-          id
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    }
-  `);
+  const [loaded, setLoaded] = useState(false);
 
   return (
-    <Layout mask>
-      <SEO title="Home" />
+    <Layout>
+      <SEO title="Tickets" />
 
-      <Divider />
-      <BigCopy />
-      <Divider />
-      {DATA.allFile.nodes.map(poster => (
-        <Poster key={poster.id} poster={poster.childImageSharp.fluid} />
-      ))}
-      <SocialMedia />
+      <div className="container">
+        <div id="dice-event-list-widget"></div>
+      </div>
+
+      <Script
+        src="https://widgets.dice.fm/dice-event-list-widget.js"
+        onLoad={() => setLoaded(true)}
+      />
+      {loaded && (
+        <Script
+          id="dice-widget"
+          dangerouslySetInnerHTML={{
+            __html: `DiceEventListWidget.create({"information":"full","eventTitle":"event","showImages":true,"showAudio":false,"showNewBadge":false,"hidePostponed":false,"hideCancelled":false,"layout":"gallery","roundButtons":false,"theme":"dark","fontFamily":"inherit","partnerId":"9c117b8e","apiKey":"gBSvpwh7LZ3OlVQTiCL6ras16RxhBU7G9tOMzNkT","version":2,"showPrice":true,"__p":true,"__pc":{"brandColor":"black","rounded":false},"title":"Outbreak Fest 2023","highlightColour":"#1d4ea7","promoters":["Outbreak Fest"]});`,
+          }}
+        />
+      )}
     </Layout>
   );
 };
