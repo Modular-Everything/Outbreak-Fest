@@ -19,7 +19,7 @@ const BigCopy = ({ custom, title, subtitle, copy }) => {
     );
   }
 
-  const EVENT_DATE = new Date('June 21, 2022');
+  const EVENT_DATE = new Date('June 24, 2022');
 
   const renderer = ({ days, hours, completed }) => {
     if (completed || hours > 20) {
