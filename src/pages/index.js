@@ -33,7 +33,7 @@ const IndexPage = () => {
         <Script
           id="dice-widget"
           dangerouslySetInnerHTML={{
-            __html: `DiceEventListWidget.create({"information":"full","eventTitle":"event","showImages":true,"showAudio":false,"showNewBadge":false,"hidePostponed":false,"hideCancelled":false,"layout":"gallery","roundButtons":false,"theme":"dark","fontFamily":"inherit","partnerId":"9c117b8e","apiKey":"gBSvpwh7LZ3OlVQTiCL6ras16RxhBU7G9tOMzNkT","version":2,"showPrice":true,"__p":true,"__pc":{"brandColor":"black","rounded":false},"highlightColour":"#1d4ea7","promoters":["Outbreak Fest"]});`,
+            __html: `DiceEventListWidget.create({"information":"full","eventTitle":"event","showImages":true,"showAudio":false,"showNewBadge":false,"hidePostponed":false,"hideCancelled":false,"layout":"gallery","roundButtons":false,"theme":"dark","fontFamily":"inherit","partnerId":"9c117b8e","apiKey":"gBSvpwh7LZ3OlVQTiCL6ras16RxhBU7G9tOMzNkT","version":2,"showPrice":true,"__p":true,"__pc":{"brandColor":"black","rounded":false},"highlightColour":"#fff","promoters":["Outbreak Fest"]});`,
           }}
         />
       )}
