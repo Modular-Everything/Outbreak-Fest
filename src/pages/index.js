@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Script } from 'gatsby';
 
 import Layout from '../components/Layout/Layout';
+import BigCopy from '../components/BigCopy/BigCopy';
 import SEO from '../components/SEO/SEO';
 
 // ====
@@ -12,6 +13,13 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Tickets" />
+
+      <BigCopy
+        custom
+        title="Outbreak Fest 2023"
+        subtitle="Presale Tickets"
+        copy="£95 + Fees"
+      />
 
       <div className="container">
         <div id="dice-event-list-widget"></div>
@@ -25,7 +33,7 @@ const IndexPage = () => {
         <Script
           id="dice-widget"
           dangerouslySetInnerHTML={{
-            __html: `DiceEventListWidget.create({"information":"full","eventTitle":"event","showImages":true,"showAudio":false,"showNewBadge":false,"hidePostponed":false,"hideCancelled":false,"layout":"gallery","roundButtons":false,"theme":"dark","fontFamily":"inherit","partnerId":"9c117b8e","apiKey":"gBSvpwh7LZ3OlVQTiCL6ras16RxhBU7G9tOMzNkT","version":2,"showPrice":true,"__p":true,"__pc":{"brandColor":"black","rounded":false},"title":"Outbreak Fest 2023","highlightColour":"#1d4ea7","promoters":["Outbreak Fest"]});`,
+            __html: `DiceEventListWidget.create({"information":"full","eventTitle":"event","showImages":true,"showAudio":false,"showNewBadge":false,"hidePostponed":false,"hideCancelled":false,"layout":"gallery","roundButtons":false,"theme":"dark","fontFamily":"inherit","partnerId":"9c117b8e","apiKey":"gBSvpwh7LZ3OlVQTiCL6ras16RxhBU7G9tOMzNkT","version":2,"showPrice":true,"__p":true,"__pc":{"brandColor":"black","rounded":false},"highlightColour":"#1d4ea7","promoters":["Outbreak Fest"]});`,
           }}
         />
       )}
