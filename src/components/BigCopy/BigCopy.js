@@ -34,7 +34,7 @@ const BigCopy = ({ custom, title, subtitle, copy }) => {
     }
     return (
       <Venue style={{ marginBottom: '2rem' }}>
-        <span style={{ color: 'var(--secondary)' }}>{days}</span>{' '}
+        <span style={{ color: 'var(--secondary)' }}>1</span>{' '}
         {days <= 1 ? 'day' : 'days'} to go
       </Venue>
     );
