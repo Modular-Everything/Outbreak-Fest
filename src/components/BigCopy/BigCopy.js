@@ -13,7 +13,7 @@ const BigCopy = ({ custom, title, subtitle, copy }) => {
         <BigCopyWrap>
           {title && <DateWrap>{title}</DateWrap>}
           {subtitle && <Venue>{subtitle}</Venue>}
-          {copy && <Location>{copy}</Location>}
+          {copy && <Location dangerouslySetInnerHTML={{ __html: copy }} />}
         </BigCopyWrap>
       </div>
     );

@@ -18,7 +18,7 @@ const IndexPage = () => {
         custom
         title="Outbreak Fest 2023"
         subtitle="Presale Tickets"
-        copy="£95 + Fees"
+        copy="£95 + Fees<br />June 23 - 25"
       />
 
       <div className="container">
